@@ -19,6 +19,28 @@ and does the following:
    Then exit the program.
 """
 
+from datetime import date
+import time
 import sys
 import calendar
 from datetime import datetime
+
+month = input('Please enter the month as MM or 01 for January: ')
+year = input('Please enter the year as YY or 20 for 2020: ')
+
+if(month == ''):
+    month = datetime.now().month
+else:
+    month = int(month)
+
+if(year == ''):
+    year = datetime.now().year
+else:
+    year = int(year)
+
+
+def get_cal(year, month):
+    print(calendar.month(year, month))
+
+
+get_cal(year, month)
